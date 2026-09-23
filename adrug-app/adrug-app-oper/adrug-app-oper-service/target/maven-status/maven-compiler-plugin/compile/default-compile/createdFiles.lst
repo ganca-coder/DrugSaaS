@@ -1,0 +1,6 @@
+com\adrug\erp\app\oper\OperBootApplication.class
+com\adrug\erp\app\oper\user\rpc\EmployeeRpc.class
+com\adrug\erp\app\oper\user\service\impl\UserInfoServiceImpl.class
+com\adrug\erp\app\oper\user\controller\UserInfoController.class
+com\adrug\erp\app\oper\user\rpc\impl\EmployeeRpcImpl.class
+com\adrug\erp\app\oper\user\service\UserInfoService.class

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  仓库信息 Mapper XML（预留）。
+  枚举字段（warehouse_type/status）落库为 code，映射时需指定 MybatisEnumTypeHandler。
+  软删除字段 deleted 由 @TableLogic 自动处理，XML 中不写删除条件。
+-->
+<mapper namespace="com.adrug.erp.svc.bus.info.mapper.WarehouseMapper">
+
+    <resultMap id="BaseResultMap" type="com.adrug.erp.svc.bus.info.entity.Warehouse">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="org_id" property="orgId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="update_user_id" property="updateUserId"/>
+        <result column="deleted" property="deleted"/>
+        <result column="version" property="version"/>
+        <result column="cust1" property="cust1"/>
+        <result column="cust2" property="cust2"/>
+        <result column="cust3" property="cust3"/>
+        <result column="cust4" property="cust4"/>
+        <result column="cust5" property="cust5"/>
+        <result column="cust6" property="cust6"/>
+
+        <result column="warehouse_code" property="warehouseCode"/>
+        <result column="warehouse_name" property="warehouseName"/>
+        <result column="warehouse_type" property="warehouseType"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="address" property="address"/>
+        <result column="manager" property="manager"/>
+        <result column="phone" property="phone"/>
+        <result column="status" property="status"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, tenant_id, org_id, create_time, update_time, create_user_id, update_user_id,
+        deleted, version, cust1, cust2, cust3, cust4, cust5, cust6,
+        warehouse_code, warehouse_name, warehouse_type, address, manager, phone, status, remark
+    </sql>
+
+    <!-- 物理删除（预留）：绕过 @TableLogic，真正从数据库删除记录。仅用于特殊清理场景。 -->
+    <delete id="deletePhysically">
+        DELETE FROM warehouse WHERE id = #{id}
+    </delete>
+</mapper>

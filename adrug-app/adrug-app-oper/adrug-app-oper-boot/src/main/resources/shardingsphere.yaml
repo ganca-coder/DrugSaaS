@@ -1,0 +1,208 @@
+# ShardingSphere-JDBC 配置
+# - adrug_common：通用库（不分租户）
+# - adrug_bus_info：业务库（库级分租户：tenant_id % 2 → _0 / _1）
+dataSources:
+  ds_common:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_common?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_info_0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_info_0?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_info_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_info_1?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_pms_0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_pms_0?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_pms_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_pms_1?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_wms_0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_wms_0?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_wms_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_wms_1?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_oms_0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_oms_0?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+  ds_bus_oms_1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/adrug_bus_oms_1?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8&allowPublicKeyRetrieval=true
+    username: root
+    password: "123456"
+
+rules:
+  - !SHARDING
+    tables:
+      # 通用库（单库，不分片）
+      tenant:
+        actualDataNodes: ds_common.tenant
+      org:
+        actualDataNodes: ds_common.org
+      account:
+        actualDataNodes: ds_common.account
+      employee:
+        actualDataNodes: ds_common.employee
+      menu:
+        actualDataNodes: ds_common.menu
+      role:
+        actualDataNodes: ds_common.role
+      role_permission:
+        actualDataNodes: ds_common.role_permission
+      account_role:
+        actualDataNodes: ds_common.account_role
+      role_data_org:
+        actualDataNodes: ds_common.role_data_org
+      member:
+        actualDataNodes: ds_common.member
+      # 业务库（库级分租户）
+      drug:
+        actualDataNodes: ds_bus_info_${0..1}.drug
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_info_db_inline
+      supplier:
+        actualDataNodes: ds_bus_info_${0..1}.supplier
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_info_db_inline
+      supplier_certificate:
+        actualDataNodes: ds_bus_info_${0..1}.supplier_certificate
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_info_db_inline
+      warehouse:
+        actualDataNodes: ds_bus_info_${0..1}.warehouse
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_info_db_inline
+      # 采购管理业务库（库级分租户）
+      purchase_order:
+        actualDataNodes: ds_bus_pms_${0..1}.purchase_order
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      purchase_order_item:
+        actualDataNodes: ds_bus_pms_${0..1}.purchase_order_item
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      receiving_order:
+        actualDataNodes: ds_bus_pms_${0..1}.receiving_order
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      receiving_order_item:
+        actualDataNodes: ds_bus_pms_${0..1}.receiving_order_item
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      acceptance_order:
+        actualDataNodes: ds_bus_pms_${0..1}.acceptance_order
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      acceptance_order_item:
+        actualDataNodes: ds_bus_pms_${0..1}.acceptance_order_item
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      purchase_inbound_order:
+        actualDataNodes: ds_bus_pms_${0..1}.purchase_inbound_order
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      purchase_inbound_order_item:
+        actualDataNodes: ds_bus_pms_${0..1}.purchase_inbound_order_item
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      rejection_order:
+        actualDataNodes: ds_bus_pms_${0..1}.rejection_order
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      rejection_order_item:
+        actualDataNodes: ds_bus_pms_${0..1}.rejection_order_item
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_pms_db_inline
+      # 订单/库存业务库（库级分租户）
+      inventory:
+        actualDataNodes: ds_bus_wms_${0..1}.inventory
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_wms_db_inline
+      pos_retail_order:
+        actualDataNodes: ds_bus_oms_${0..1}.pos_retail_order
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_oms_db_inline
+      pos_retail_order_item:
+        actualDataNodes: ds_bus_oms_${0..1}.pos_retail_order_item
+        databaseStrategy:
+          standard:
+            shardingColumn: tenant_id
+            shardingAlgorithmName: bus_oms_db_inline
+    shardingAlgorithms:
+      bus_info_db_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds_bus_info_${tenant_id % 2}
+      bus_pms_db_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds_bus_pms_${tenant_id % 2}
+      bus_wms_db_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds_bus_wms_${tenant_id % 2}
+      bus_oms_db_inline:
+        type: INLINE
+        props:
+          algorithm-expression: ds_bus_oms_${tenant_id % 2}
+
+props:
+  sql-show: true

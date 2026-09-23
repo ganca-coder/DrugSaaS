@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="adrug-app-term-boot" />
+        <module name="adrug-boot-all" />
+        <module name="adrug-svc-bus-wms-interface" />
+        <module name="adrug-svc-common-interface" />
+        <module name="adrug-svc-bus-pms-model" />
+        <module name="adrug-svc-user-auth-model" />
+        <module name="adrug-svc-bus-wms-provider" />
+        <module name="adrug-common-cache" />
+        <module name="adrug-svc-bus-pms-interface" />
+        <module name="adrug-user-info-repository" />
+        <module name="adrug-svc-bus-oms-model" />
+        <module name="adrug-svc-user-auth-provider" />
+        <module name="adrug-common-redis" />
+        <module name="adrug-svc-common-model" />
+        <module name="adrug-svc-user-info-repository" />
+        <module name="adrug-svc-bus-oms-interface" />
+        <module name="adrug-common-mq" />
+        <module name="adrug-svc-common-provider" />
+        <module name="adrug-svc-user-info-provider" />
+        <module name="adrug-common-anno" />
+        <module name="adrug-common-all" />
+        <module name="adrug-svc-user-auth-repository" />
+        <module name="adrug-svc-bus-pms-provider" />
+        <module name="adrug-svc-user-info-model" />
+        <module name="adrug-common-model" />
+        <module name="adrug-svc-user-auth-interface" />
+        <module name="adrug-svc-bus-wms-repository" />
+        <module name="adrug-app-term-service" />
+        <module name="adrug-user-info-model" />
+        <module name="adrug-common-core" />
+        <module name="adrug-svc-bus-info-repository" />
+        <module name="adrug-app-oper-boot" />
+        <module name="adrug-app-oper-service" />
+        <module name="adrug-svc-bus-oms-provider" />
+        <module name="adrug-user-info-service" />
+        <module name="adrug-gateway" />
+        <module name="adrug-svc-bus-info-interface" />
+        <module name="adrug-svc-bus-oms-repository" />
+        <module name="adrug-svc-bus-info-model" />
+        <module name="adrug-app-pos" />
+        <module name="adrug-common-db" />
+        <module name="adrug-svc-user-info-interface" />
+        <module name="adrug-svc-bus-wms-model" />
+        <module name="adrug-svc-bus-info-provider" />
+        <module name="adrug-svc-bus-pms-repository" />
+        <module name="adrug-svc-common-repository" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adrug" target="21" />
+      <module name="adrug-app" target="21" />
+      <module name="adrug-app-mobile" target="21" />
+      <module name="adrug-app-oper" target="21" />
+      <module name="adrug-app-oper-boot" target="21" />
+      <module name="adrug-app-oper-service" target="21" />
+      <module name="adrug-app-pos" target="21" />
+      <module name="adrug-app-shop" target="21" />
+      <module name="adrug-app-term" target="21" />
+      <module name="adrug-app-term-boot" target="21" />
+      <module name="adrug-app-term-service" target="21" />
+      <module name="adrug-boot" target="21" />
+      <module name="adrug-boot (1)" target="21" />
+      <module name="adrug-boot-all" target="21" />
+      <module name="adrug-bus" target="21" />
+      <module name="adrug-bus-oms-shop" target="1.5" />
+      <module name="adrug-common" target="21" />
+      <module name="adrug-common-all" target="21" />
+      <module name="adrug-common-anno" target="21" />
+      <module name="adrug-common-cache" target="21" />
+      <module name="adrug-common-core" target="21" />
+      <module name="adrug-common-db" target="21" />
+      <module name="adrug-common-model" target="21" />
+      <module name="adrug-common-mq" target="21" />
+      <module name="adrug-common-redis" target="21" />
+      <module name="adrug-erp" target="21" />
+      <module name="adrug-ext" target="21" />
+      <module name="adrug-ext-iexport" target="1.5" />
+      <module name="adrug-gateway" target="21" />
+      <module name="adrug-gsp" target="21" />
+      <module name="adrug-gsp-buslog" target="21" />
+      <module name="adrug-gsp-minsurance" target="1.5" />
+      <module name="adrug-parent" target="21" />
+      <module name="adrug-saas" target="21" />
+      <module name="adrug-svc" target="21" />
+      <module name="adrug-svc-bus" target="21" />
+      <module name="adrug-svc-bus-common" target="1.5" />
+      <module name="adrug-svc-bus-info" target="21" />
+      <module name="adrug-svc-bus-info-interface" target="21" />
+      <module name="adrug-svc-bus-info-model" target="21" />
+      <module name="adrug-svc-bus-info-provider" target="21" />
+      <module name="adrug-svc-bus-info-repository" target="21" />
+      <module name="adrug-svc-bus-oms" target="21" />
+      <module name="adrug-svc-bus-oms-interface" target="21" />
+      <module name="adrug-svc-bus-oms-model" target="21" />
+      <module name="adrug-svc-bus-oms-provider" target="21" />
+      <module name="adrug-svc-bus-oms-repository" target="21" />
+      <module name="adrug-svc-bus-oms-shop" target="21" />
+      <module name="adrug-svc-bus-pms" target="21" />
+      <module name="adrug-svc-bus-pms-interface" target="21" />
+      <module name="adrug-svc-bus-pms-model" target="21" />
+      <module name="adrug-svc-bus-pms-provider" target="21" />
+      <module name="adrug-svc-bus-pms-repository" target="21" />
+      <module name="adrug-svc-bus-tms" target="1.5" />
+      <module name="adrug-svc-bus-wms" target="21" />
+      <module name="adrug-svc-bus-wms-interface" target="21" />
+      <module name="adrug-svc-bus-wms-model" target="21" />
+      <module name="adrug-svc-bus-wms-provider" target="21" />
+      <module name="adrug-svc-bus-wms-repository" target="21" />
+      <module name="adrug-svc-common" target="21" />
+      <module name="adrug-svc-common-interface" target="21" />
+      <module name="adrug-svc-common-model" target="21" />
+      <module name="adrug-svc-common-provider" target="21" />
+      <module name="adrug-svc-common-repository" target="21" />
+      <module name="adrug-svc-ext" target="21" />
+      <module name="adrug-svc-gsp" target="21" />
+      <module name="adrug-svc-gsp-buslog" target="21" />
+      <module name="adrug-svc-gsp-minsurance" target="21" />
+      <module name="adrug-svc-user" target="21" />
+      <module name="adrug-svc-user-all" target="1.5" />
+      <module name="adrug-svc-user-auth" target="21" />
+      <module name="adrug-svc-user-auth-interface" target="21" />
+      <module name="adrug-svc-user-auth-model" target="21" />
+      <module name="adrug-svc-user-auth-provider" target="21" />
+      <module name="adrug-svc-user-auth-repository" target="21" />
+      <module name="adrug-svc-user-info" target="21" />
+      <module name="adrug-svc-user-info-interface" target="21" />
+      <module name="adrug-svc-user-info-model" target="21" />
+      <module name="adrug-svc-user-info-provider" target="21" />
+      <module name="adrug-svc-user-info-repository" target="21" />
+      <module name="adrug-svc-user-info-service" target="21" />
+      <module name="adrug-svc-user-permission" target="21" />
+      <module name="adrug-svc-user-permission-interface" target="21" />
+      <module name="adrug-svc-user-permission-model" target="21" />
+      <module name="adrug-svc-user-permission-provider" target="21" />
+      <module name="adrug-svc-user-permission-repository" target="21" />
+      <module name="adrug-svc-user-tenant" target="21" />
+      <module name="adrug-user" target="21" />
+      <module name="adrug-user-all" target="1.5" />
+      <module name="adrug-user-auth" target="21" />
+      <module name="adrug-user-info" target="21" />
+      <module name="adrug-user-info-interface" target="1.5" />
+      <module name="adrug-user-info-model" target="21" />
+      <module name="adrug-user-info-repository" target="21" />
+      <module name="adrug-user-info-service" target="21" />
+      <module name="adrug-user-member" target="1.5" />
+      <module name="adrug-user-permission" target="1.5" />
+      <module name="adrug-user-tenant" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

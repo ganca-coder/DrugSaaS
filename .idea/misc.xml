@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-app/adrug-app-oper/adrug-app-oper-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-app/adrug-app-oper/adrug-app-oper-service/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-common/adrug-common-anno/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-common/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/adrug-app/adrug-app-shop/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-boot/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-bus/adrug-svc-bus-common/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-bus/adrug-svc-bus-tms/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-ext/adrug-svc-ext-iexport/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-ext/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-gsp/adrug-svc-gsp-buslog/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-gsp/adrug-svc-gsp-minsurance/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-gsp/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-user/adrug-svc-user-all/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-user/adrug-svc-user-info/adrug-user-info-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-user/adrug-svc-user-member/pom.xml" />
+        <option value="$PROJECT_DIR$/adrug-svc/adrug-svc-user/adrug-svc-user-tenant/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK" />
+</project>

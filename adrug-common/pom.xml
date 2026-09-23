@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.adrug.erp</groupId>
+        <artifactId>adrug-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../adrug-parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.adrug.erp</groupId>
+    <artifactId>adrug-common</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>adrug-common</name>
+    <description>通用模块，MQ、Cache</description>
+    <modules>
+        <module>adrug-common-anno</module>
+        <module>adrug-common-model</module>
+        <module>adrug-common-core</module>
+        <module>adrug-common-mq</module>
+        <module>adrug-common-redis</module>
+        <module>adrug-common-db</module>
+        <module>adrug-common-cache</module>
+        <module>adrug-common-all</module>
+    </modules>
+</project>

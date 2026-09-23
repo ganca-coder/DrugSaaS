@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  机构 Mapper XML（预留）。
+  注意：org 表含 tenant_id，无 org_id。
+-->
+<mapper namespace="com.adrug.erp.svc.user.info.mapper.OrgMapper">
+
+    <resultMap id="BaseResultMap" type="com.adrug.erp.svc.user.info.entity.Org">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="update_user_id" property="updateUserId"/>
+        <result column="deleted" property="deleted"/>
+        <result column="version" property="version"/>
+
+        <result column="parent_id" property="parentId"/>
+        <result column="org_code" property="orgCode"/>
+        <result column="org_name" property="orgName"/>
+        <result column="org_type" property="orgType"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="status" property="status"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, tenant_id, create_time, update_time, create_user_id, update_user_id, deleted, version,
+        parent_id, org_code, org_name, org_type, status, remark
+    </sql>
+</mapper>

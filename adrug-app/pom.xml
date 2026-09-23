@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.adrug.erp</groupId>
+        <artifactId>adrug-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../adrug-parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.adrug.erp</groupId>
+    <artifactId>adrug-app</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>adrug-app</name>
+    <description>客户端接入服务</description>
+    <modules>
+        <module>adrug-app-oper</module>
+        <module>adrug-app-pos</module>
+        <module>adrug-app-term</module>
+    </modules>
+</project>

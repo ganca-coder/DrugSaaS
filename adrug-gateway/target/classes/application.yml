@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: adrug-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+    gateway:
+      routes:
+        - id: app-oper
+          uri: lb://adrug-app-oper
+          predicates:
+            - Path=/app/oper/**
+        - id: app-term
+          uri: lb://adrug-app-term
+          predicates:
+            - Path=/app/pos/**
+  config:
+    import:
+      - optional:nacos:${spring.application.name}.yaml
+      - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml

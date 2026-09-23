@@ -1,0 +1,3 @@
+com\adrug\erp\common\core\aspect\FeignKouplelessAspect.class
+com\adrug\erp\common\core\exception\BusinessException.class
+com\adrug\erp\common\core\handler\GlobalExceptionHandler.class

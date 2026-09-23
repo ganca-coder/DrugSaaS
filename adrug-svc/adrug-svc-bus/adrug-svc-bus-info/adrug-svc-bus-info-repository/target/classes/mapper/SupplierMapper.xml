@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  供应商信息 Mapper XML（预留）。
+  枚举字段（status）落库为 code，映射时需指定 MybatisEnumTypeHandler。
+  软删除字段 deleted 由 @TableLogic 自动处理，XML 中不写删除条件。
+-->
+<mapper namespace="com.adrug.erp.svc.bus.info.mapper.SupplierMapper">
+
+    <resultMap id="BaseResultMap" type="com.adrug.erp.svc.bus.info.entity.Supplier">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="org_id" property="orgId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="update_user_id" property="updateUserId"/>
+        <result column="deleted" property="deleted"/>
+        <result column="version" property="version"/>
+        <result column="cust1" property="cust1"/>
+        <result column="cust2" property="cust2"/>
+        <result column="cust3" property="cust3"/>
+        <result column="cust4" property="cust4"/>
+        <result column="cust5" property="cust5"/>
+        <result column="cust6" property="cust6"/>
+
+        <result column="supplier_code" property="supplierCode"/>
+        <result column="supplier_name" property="supplierName"/>
+        <result column="status" property="status"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="enterprise_type" property="enterpriseType"/>
+        <result column="supplier_category" property="supplierCategory"/>
+        <result column="tax_no" property="taxNo"/>
+        <result column="settlement_method" property="settlementMethod"/>
+        <result column="legal_representative" property="legalRepresentative"/>
+        <result column="phone" property="phone"/>
+        <result column="enterprise_leader" property="enterpriseLeader"/>
+        <result column="quality_leader" property="qualityLeader"/>
+        <result column="contact" property="contact"/>
+        <result column="contact_phone" property="contactPhone"/>
+        <result column="contact_id_card" property="contactIdCard"/>
+        <result column="company_address" property="companyAddress"/>
+        <result column="warehouse_address" property="warehouseAddress"/>
+        <result column="region" property="region"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city"/>
+        <result column="district" property="district"/>
+        <result column="fax" property="fax"/>
+        <result column="email" property="email"/>
+        <result column="postcode" property="postcode"/>
+        <result column="expected_delivery_days" property="expectedDeliveryDays"/>
+        <result column="input_tax_rate" property="inputTaxRate"/>
+        <result column="invoice_type" property="invoiceType"/>
+        <result column="drug_supervision_unit" property="drugSupervisionUnit"/>
+        <result column="entrusted_org" property="entrustedOrg"/>
+        <result column="mnemonic_code" property="mnemonicCode"/>
+        <result column="planned_variety" property="plannedVariety"/>
+        <result column="last_year_report" property="lastYearReport"/>
+        <result column="seal_style" property="sealStyle"/>
+        <result column="quality_system_survey" property="qualitySystemSurvey"/>
+        <result column="with_goods_bill_style" property="withGoodsBillStyle"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, tenant_id, org_id, create_time, update_time, create_user_id, update_user_id,
+        deleted, version, cust1, cust2, cust3, cust4, cust5, cust6,
+        supplier_code, supplier_name, status, enterprise_type, supplier_category, tax_no,
+        settlement_method, legal_representative, phone, enterprise_leader, quality_leader, contact,
+        contact_phone, contact_id_card, company_address, warehouse_address, region, province, city,
+        district, fax, email, postcode, expected_delivery_days, input_tax_rate, invoice_type,
+        drug_supervision_unit, entrusted_org, mnemonic_code, planned_variety, last_year_report,
+        seal_style, quality_system_survey, with_goods_bill_style, remark
+    </sql>
+
+    <!-- 物理删除（预留）：绕过 @TableLogic，真正从数据库删除记录。仅用于特殊清理场景。 -->
+    <delete id="deletePhysically">
+        DELETE FROM supplier WHERE id = #{id}
+    </delete>
+</mapper>

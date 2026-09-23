@@ -1,0 +1,4 @@
+com\adrug\erp\svc\user\info\convert\EmployeeConvert.class
+com\adrug\erp\svc\user\info\controller\EmployeeController.class
+com\adrug\erp\svc\user\info\provider\impl\EmployeeProviderImpl.class
+com\adrug\erp\svc\user\info\UserInfoBootApplication.class

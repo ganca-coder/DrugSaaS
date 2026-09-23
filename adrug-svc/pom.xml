@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.adrug.erp</groupId>
+        <artifactId>adrug-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../adrug-parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.adrug.erp</groupId>
+    <artifactId>adrug-svc</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>adrug-svc</name>
+    <description>服务层，不处理跨业务流程，只处理服务内部逻辑</description>
+    <modules>
+        <module>adrug-svc-user</module>
+        <module>adrug-svc-common</module>
+        <module>adrug-svc-bus</module>
+<!--        <module>adrug-svc-gsp</module>-->
+<!--        <module>adrug-svc-ext</module>-->
+    </modules>
+</project>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  药品信息 Mapper XML（预留）。
+  当前简单 CRUD 由 MyBatis-Plus 的 BaseMapper 提供，无需 XML；
+  本文件用于预留复杂 SQL（多表关联、自定义统计、动态条件查询等）的扩展点。
+
+  注意事项：
+  1. 枚举字段（drug_type/status）落库为 code，映射时需指定 MybatisEnumTypeHandler。
+  2. 软删除字段 deleted 由 @TableLogic 自动处理，XML 中不写删除条件。
+-->
+<mapper namespace="com.adrug.erp.svc.bus.info.mapper.DrugMapper">
+
+    <resultMap id="BaseResultMap" type="com.adrug.erp.svc.bus.info.entity.Drug">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="org_id" property="orgId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="update_user_id" property="updateUserId"/>
+        <result column="deleted" property="deleted"/>
+        <result column="version" property="version"/>
+        <result column="cust1" property="cust1"/>
+        <result column="cust2" property="cust2"/>
+        <result column="cust3" property="cust3"/>
+        <result column="cust4" property="cust4"/>
+        <result column="cust5" property="cust5"/>
+        <result column="cust6" property="cust6"/>
+
+        <result column="drug_code" property="drugCode"/>
+        <result column="drug_name" property="drugName"/>
+        <result column="generic_name" property="genericName"/>
+        <result column="spec" property="spec"/>
+        <result column="dosage_form" property="dosageForm"/>
+        <result column="unit" property="unit"/>
+        <result column="manufacturer" property="manufacturer"/>
+        <result column="approval_no" property="approvalNo"/>
+        <result column="main_barcode" property="mainBarcode"/>
+        <result column="category" property="category"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="package_spec" property="packageSpec"/>
+        <result column="origin" property="origin"/>
+        <result column="marketing_holder" property="marketingHolder"/>
+        <result column="marketing_holder_address" property="marketingHolderAddress"/>
+        <result column="approval_expiry_date" property="approvalExpiryDate"/>
+        <result column="drug_supervision_code" property="drugSupervisionCode"/>
+        <result column="barcode1" property="barcode1"/>
+        <result column="standard_code" property="standardCode"/>
+        <result column="storage_condition" property="storageCondition"/>
+        <result column="business_scope" property="businessScope"/>
+        <result column="split_spec" property="splitSpec"/>
+        <result column="split_unit" property="splitUnit"/>
+        <result column="purchase_price" property="purchasePrice"/>
+        <result column="retail_price" property="retailPrice"/>
+        <result column="member_price" property="memberPrice"/>
+        <result column="split_price" property="splitPrice"/>
+        <result column="suggested_retail_price" property="suggestedRetailPrice"/>
+        <result column="national_medical_insurance_code" property="nationalMedicalInsuranceCode"/>
+        <result column="mnemonic_code" property="mnemonicCode"/>
+        <result column="drug_type" property="drugType"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="status" property="status"
+                typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, tenant_id, org_id, create_time, update_time, create_user_id, update_user_id,
+        deleted, version, cust1, cust2, cust3, cust4, cust5, cust6,
+        drug_code, drug_name, generic_name, spec, dosage_form, unit, manufacturer, approval_no,
+        main_barcode, category, package_spec, origin, marketing_holder, marketing_holder_address,
+        approval_expiry_date, drug_supervision_code, barcode1, standard_code, storage_condition,
+        business_scope, split_spec, split_unit, purchase_price, retail_price, member_price,
+        split_price, suggested_retail_price, national_medical_insurance_code, mnemonic_code,
+        drug_type, status, remark
+    </sql>
+
+    <!-- 物理删除（预留）：绕过 @TableLogic，真正从数据库删除记录。仅用于特殊清理场景。 -->
+    <delete id="deletePhysically">
+        DELETE FROM drug WHERE id = #{id}
+    </delete>
+</mapper>

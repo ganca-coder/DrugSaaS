@@ -1,0 +1,6 @@
+com\adrug\erp\common\dto\PageQuery.class
+com\adrug\erp\common\dto\PageResult.class
+com\adrug\erp\common\result\ResultCode.class
+com\adrug\erp\common\entity\BaseEntity.class
+com\adrug\erp\common\result\Result.class
+com\adrug\erp\common\enums\BaseEnum.class

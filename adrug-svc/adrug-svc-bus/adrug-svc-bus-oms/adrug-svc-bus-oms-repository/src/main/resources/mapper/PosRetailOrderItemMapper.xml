@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+  POS零售单明细 Mapper XML（预留）。
+  软删除字段 deleted 由 @TableLogic 自动处理，XML 中不写删除条件。
+-->
+<mapper namespace="com.adrug.erp.svc.bus.oms.mapper.PosRetailOrderItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.adrug.erp.svc.bus.oms.entity.PosRetailOrderItem">
+        <id column="id" property="id"/>
+        <result column="tenant_id" property="tenantId"/>
+        <result column="org_id" property="orgId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="update_user_id" property="updateUserId"/>
+        <result column="deleted" property="deleted"/>
+        <result column="version" property="version"/>
+        <result column="cust1" property="cust1"/>
+        <result column="cust2" property="cust2"/>
+        <result column="cust3" property="cust3"/>
+        <result column="cust4" property="cust4"/>
+        <result column="cust5" property="cust5"/>
+        <result column="cust6" property="cust6"/>
+
+        <result column="order_id" property="orderId"/>
+        <result column="seq_no" property="seqNo"/>
+        <result column="drug_id" property="drugId"/>
+        <result column="drug_code" property="drugCode"/>
+        <result column="generic_name" property="genericName"/>
+        <result column="drug_name" property="drugName"/>
+        <result column="unit" property="unit"/>
+        <result column="spec" property="spec"/>
+        <result column="origin" property="origin"/>
+        <result column="batch_no" property="batchNo"/>
+        <result column="production_date" property="productionDate"/>
+        <result column="expiry_date" property="expiryDate"/>
+        <result column="qty" property="qty"/>
+        <result column="price" property="price"/>
+        <result column="amount" property="amount"/>
+        <result column="discount_rate" property="discountRate"/>
+        <result column="discount_amount" property="discountAmount"/>
+        <result column="discounted_price" property="discountedPrice"/>
+        <result column="receivable_amount" property="receivableAmount"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, tenant_id, org_id, create_time, update_time, create_user_id, update_user_id,
+        deleted, version, cust1, cust2, cust3, cust4, cust5, cust6,
+        order_id, seq_no, drug_id, drug_code, generic_name, drug_name, unit, spec, origin,
+        batch_no, production_date, expiry_date, qty, price, amount, discount_rate,
+        discount_amount, discounted_price, receivable_amount, remark
+    </sql>
+
+    <delete id="deletePhysically">
+        DELETE FROM pos_retail_order_item WHERE id = #{id}
+    </delete>
+</mapper>

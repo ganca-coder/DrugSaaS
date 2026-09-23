@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.adrug.erp</groupId>
+        <artifactId>adrug-svc-bus</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.adrug.erp</groupId>
+    <artifactId>adrug-svc-bus-info</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>adrug-svc-bus-info</name>
+    <description>基础信息，如：药品信息、供应商信息等</description>
+    <modules>
+        <module>adrug-svc-bus-info-interface</module>
+        <module>adrug-svc-bus-info-model</module>
+        <module>adrug-svc-bus-info-repository</module>
+        <module>adrug-svc-bus-info-provider</module>
+    </modules>
+</project>
