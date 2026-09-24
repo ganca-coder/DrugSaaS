@@ -1,45 +1,11 @@
-# DrugERP · 医药 ERP 开源 SaaS
-
-一个面向**单一 / 连锁药店**的医药 ERP SaaS 系统，基于 Spring Cloud 微服务 + Vue 构建，数据隔离模型为 **租户 → 机构 → 员工**，并预留 B2B、B2C、O2O 及医保业务扩展能力。
-
-> 当前处于**骨架搭建阶段**：模块目录与 POM 已生成，业务代码正在逐步实现中。本项目大部分业务功能由 **Claude Code** 完成开发。
-
-
+# 医药流通ERP SaaS系统
 ## 一、描述
-
-- **项目名称**：DrugERP（医药 ERP SaaS）
-- **业务定位**：当前聚焦**单一 / 连锁药店**业务，预留 B2B、B2C、O2O 及医保（医保）业务扩展。
-- **数据隔离模型**：`租户（Tenant） → 机构（Organization） → 员工（Employee）`。
-- **技术形态**：前后端分离；后端 Spring Cloud 多模块微服务，前端 Vue。
-- **架构特性**：服务**横纵向可拆可合**，同时支持 **Koupleless 模块化热更新**部署（见[六、部署方式](#六部署方式)）。
-- **开发方式**：大部分业务功能由 **Claude Code** 完成开发（详见[七、探讨方式](#七探讨方式)）。
-- **代码规范**：后端分层与接口规范沉淀于 Skill `springboot-code-standard`（`.claude/skills/`）。
-
----
+一个面向多租户医药流通ERP SaaS，基于 Spring Cloud 微服务 + Vue 构建，数据隔离模型为 **租户 → 机构 → 员工**，支持连锁药店、B2B、B2C、O2O与医保业务。
 
 ## 二、总技术架构图
 ![图片](./image/医药SaaS总架构图.jpg)
 
 ### 技术栈版本
-
-| 组件 | 版本 | 说明 |
-|---|---|---|
-| JDK | 21 | — |
-| Spring Boot | 3.2.12 | — |
-| Spring Cloud | 2023.0.6 | — |
-| Spring Cloud Alibaba | 2023.0.1.2 | Nacos 注册 / 配置 |
-| Nacos | 3.2.4 | 服务端（注册中心 / 配置中心） |
-| RabbitMQ | 4.3.1 | 消息队列 |
-| Redis | 8.2.8 | 服务端（缓存） |
-| XXL-Job | 3.4.2 | 分布式定时任务 |
-| EhCache | 3.12.0 | 本地缓存 |
-| MyBatis-Plus | 3.5.5 | ORM（`mybatis-plus-spring-boot3-starter`） |
-| MySQL | 8.4 | 驱动 `com.mysql:mysql-connector-j` |
-| ShardingSphere | 5.4.1 | 分库分表（多租户预留） |
-| Koupleless | 2.1.11 | 模块化热更新运行时 |
-| JJWT | 0.12.6 | JWT 鉴权 |
-| Vue | 3.x | 前端（Vite + Element Plus + Pinia） |
-
 > 版本统一在 `adrug-parent/pom.xml` 的 `<properties>` + `<dependencyManagement>` 中声明，子模块引用依赖不写版本号。
 
 ### 架构分层说明
@@ -50,7 +16,7 @@
 | 网关 `adrug-gateway` | 路由、鉴权、限流 | → 应用层 |
 | 应用层 `adrug-app` | 编排业务流程，**不写具体业务逻辑** | `Controller → Service → Rpc → Feign` |
 | 服务层 `adrug-svc` | 领域服务，处理服务内部逻辑 | `Controller → Service → Repository → Mapper` |
-| 数据层 | MySQL / OSS | — |
+| 数据层 | MySQL | — |
 
 ---
 
