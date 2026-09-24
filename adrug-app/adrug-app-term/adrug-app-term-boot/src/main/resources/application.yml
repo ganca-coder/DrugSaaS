@@ -14,22 +14,21 @@ spring:
         server-addr: 127.0.0.1:8848
         file-extension: yaml
   config:
-    import: optional:nacos:${spring.application.name}.yaml
+    import:
+      - optional:nacos:${spring.application.name}.yaml
+      - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml
 
-seata:
-  registry:
-    type: nacos
-    nacos:
-      server-addr: 127.0.0.1:8848
-      group: SEATA_GROUP
-      application: seata-server
-  config:
-    type: nacos
-    nacos:
-      server-addr: 127.0.0.1:8848
-      group: SEATA_GROUP
+seata:  # 不使用集群
+  enabled: true
   tx-service-group: adrug_tx_group
   service:
     vgroup-mapping:
       adrug_tx_group: default
+    grouplist:
+      default: 127.0.0.1:8091   # Seata Server 单机地址和端口
+  registry:
+    type: file                 # 不使用 Nacos 注册中心
+  config:
+    type: file                 # 不使用 Nacos 配置中心
   data-source-proxy-mode: AT
+

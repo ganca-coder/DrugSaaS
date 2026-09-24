@@ -80,16 +80,16 @@
         <mxCell id="3UnjcKtrPvdXKMPvuYte-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="药品 / 供应商 / 仓库" vertex="1">
           <mxGeometry height="30" width="120" x="294" y="281" as="geometry" />
         </mxCell>
-        <mxCell id="3UnjcKtrPvdXKMPvuYte-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="入库 / 销售" vertex="1">
+        <mxCell id="3UnjcKtrPvdXKMPvuYte-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="首营 / 入库 / 销售" vertex="1">
           <mxGeometry height="30" width="120" x="294" y="355" as="geometry" />
         </mxCell>
         <mxCell id="3UnjcKtrPvdXKMPvuYte-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="采购 / 收货 / 验收库" vertex="1">
           <mxGeometry height="30" width="120" x="294" y="318" as="geometry" />
         </mxCell>
-        <mxCell id="3UnjcKtrPvdXKMPvuYte-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="药品明细" vertex="1">
+        <mxCell id="3UnjcKtrPvdXKMPvuYte-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="药品 / 会员" vertex="1">
           <mxGeometry height="30" width="260" x="461" y="281" as="geometry" />
         </mxCell>
-        <mxCell id="3UnjcKtrPvdXKMPvuYte-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="会员 / 折扣" vertex="1">
+        <mxCell id="3UnjcKtrPvdXKMPvuYte-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="折扣" vertex="1">
           <mxGeometry height="30" width="260" x="461" y="318" as="geometry" />
         </mxCell>
         <mxCell id="3UnjcKtrPvdXKMPvuYte-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="结算" vertex="1">
