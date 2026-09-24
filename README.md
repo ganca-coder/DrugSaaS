@@ -1,6 +1,6 @@
 # 医药流通ERP SaaS系统
 ## 一、描述
-一个面向多租户医药流通ERP SaaS，基于 Spring Cloud 微服务 + Vue 构建，数据隔离模型为 **租户 → 机构 → 员工**，支持连锁药店、B2B、B2C、O2O与医保业务。
+一个面向多租户医药流通ERP SaaS，基于 Spring Cloud 微服务 + Vue 构建，数据隔离模型为 **租户 → 机构 → 员工**，支持连锁药店、B2B、B2C、O2O业务。
 > 本项目大部分业务功能由 **Claude Code** 完成开发，后端分层与接口规范沉淀于 Skill `springboot-code-standard`（`.claude/skills/`）
 ## 二、总技术架构图
 ![图片](./image/医药SaaS总架构图.jpg)
@@ -139,7 +139,6 @@ DrugSaaS
 ---
 
 ## 七、探讨方式
-
-本项目大部分业务功能由 **Claude Code** 完成开发，欢迎交流探讨参与共建：
+欢迎交流探讨，当前项目仅用于个人学习，无法直接用于生产环境。
 
 - 📧 邮箱：[954196064@qq.com](mailto:954196064@qq.com)
