@@ -58,22 +58,6 @@
 
 图略
 
-### 业务模块归属
-
-| 业务域 | 对应服务模块 | 说明 |
-|---|---|---|
-| 用户体系 | `adrug-svc-user-info` / `adrug-svc-user-auth` | 账号 / 租户 / 机构 / 员工 / 岗位 / 组织，认证鉴权 |
-| 通用服务 | `adrug-svc-common` | 菜单等非业务公共能力 |
-| 基础信息 | `adrug-svc-bus-info` | 商品、供应商、厂家、仓库、货位、质量、字典 |
-| 采购管理 | `adrug-svc-bus-pms` | 采购订单 / 入库 |
-| 订单管理 | `adrug-svc-bus-oms` | 药店订单 |
-| 仓库管理 | `adrug-svc-bus-wms` | 库存 / 库区 / 库位 |
-| 运输管理 | `adrug-svc-bus-tms` | 运输 / 配送 |
-| GSP 合规 | `adrug-svc-gsp-compliance` | 医药行业 GSP 规范 |
-| 医保 | `adrug-svc-gsp-insurance` | 医保接入 |
-| 扩展 | `adrug-svc-ext-iexport` / `adrug-svc-ext-ai` | 批量导入导出 / AI Agent |
-
----
 ## 四、运行效果
 
 ## 五、项目结构
